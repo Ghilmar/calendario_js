@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<body>
+    <style>
+        body {
+            display: flex;
+            margin-top: 50px;
+            margin-right: 200px;
+            margin-left: 200px;
+        }
+
+        .contenedor {
+            width: 100%;
+            border: 1px solid black;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 20% 1fr;
+            gap: 0;
+        }
+
+        #conten2 {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .letra{
+            background-color: rgb(156, 18, 18);
+            display: flex;
+            width: 100%;
+        
+        }
+
+     
+        #contenido {
+            border: 1px solid black;
+           
+        }
+
+        th, td {
+            font-family: Tahoma, Verdana;
+            font-size: 10px;
+            color: #666666;
+            text-align: center;
+        }
+
+        .current {
+            font-weight: bold;
+            color: red;
+        }
+
+        .contenedor {
+            width: 100%;
+            border: 1px solid black;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 20% 1fr;
+            gap: 0;
+        }
+
+        .contenido {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .menu {
+            grid-row: 1 / span 3;
+            background-color: #b44c2f;
+            color: white;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+        }
+
+        .menu h2 {
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <!-- Menú lateral -->
+        <div class="menu">
+            <h2>Opciones</h2>
+            <select id="mes">
+                <option value="1">Enero</option>
+                <option value="2">Febrero</option>
+                <option value="3">Marzo</option>
+                <option value="4">Abril</option>
+                <option value="5">Mayo</option>
+                <option value="6">Junio</option>
+                <option value="7">Julio</option>
+                <option value="8">Agosto</option>
+                <option value="9">Septiembre</option>
+                <option value="10">Octubre</option>
+                <option value="11">Noviembre</option>
+                <option value="12">Diciembre</option>
+            </select>
+
+            <select id="anio">
+                <script>
+                    for (let i = 1975; i <= 2024; i++) {
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+            </select>
+        </div>
+    </div>
+
+    <div class="contenido">
+        <div id="contenido">Aquí se mostrará el calendario...</div>
+    </div>
+    <script src="fetch.js"></script>
+
+</body>
+</html>
